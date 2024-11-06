@@ -42,6 +42,8 @@ function App() {
 		setFilter(filter)
 	}
 
+	const changeIsDone = (taskId: string, isDone: boolean) =>{}
+
 	let tasksForTodolist = tasks
 	if (filter === 'active') {
 		tasksForTodolist = tasks.filter(task => !task.isDone)
