@@ -45,8 +45,9 @@ function App() {
 	const changeIsDone = (taskId: string, isDone: boolean) =>{
 		const currentTask = tasks.find((el) => el.id === taskId)
 		if (currentTask) {
-			!currentTask.isDone
+			currentTask.isDone = isDone
 		}
+		setTasks([...tasks])
 	}
 
 	let tasksForTodolist = tasks
